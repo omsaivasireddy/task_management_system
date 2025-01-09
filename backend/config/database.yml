@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: task_user
+  password: your_password_here
+  host: localhost
+
+development:
+  <<: *default
+  database: task_management_development
+
+test:
+  <<: *default
+  database: task_management_test
+
+production:
+  <<: *default
+  database: task_management_production
+  username: <%= ENV['TASK_MANAGEMENT_DATABASE_USER'] %>
+  password: <%= ENV['TASK_MANAGEMENT_DATABASE_PASSWORD'] %>
