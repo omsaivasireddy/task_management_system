@@ -65,5 +65,3 @@ JWT_SECRET=your_secret_key
 - POST `/api/v1/tasks/:task_id/subtasks`
 - PUT `/api/v1/tasks/:task_id/subtasks/:id`
 - DELETE `/api/v1/tasks/:task_id/subtasks/:id`
-
-```
